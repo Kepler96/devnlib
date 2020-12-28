@@ -3,7 +3,15 @@ var router = express.Router();
 const mongoose = require('mongoose');
 const session = require('express-session');
 ///change url 
-mongoose.connect("mongodb://localhost:27017/library", {useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect('mongodb://127.0.0.1:27017/library', {
+    useUnifiedTopology: true,
+    useNewUrlParser: true,
+})
+.then(() => console.log('DB Connected!'))
+.catch(err => {
+     console.log('DB Connection Error: ' + err);
+});
+const Schema = mongoose.Schema;
 var teacherModel = require('../models/teacher');
 const bcryptjs = require('bcryptjs');
 const saltRounds = 10;
