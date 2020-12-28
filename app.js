@@ -13,9 +13,7 @@ const nav=[
     {
         link:'/authors',
         name:'Authors'
-    },
-    
-    
+    },   
 ];
 const homeRouter=require('./src/routes/homeRoutes')(nav);
 const booksRouter=require('./src/routes/bookRoutes')(nav);
@@ -47,8 +45,10 @@ app.use('/updatebook',updatebookRouter);
 // app.use('/login',loginRouter);
 var indexRouter = require('./src/routes/index');
 var usersRouter = require('./src/routes/users');
+
 var bodyParser = require('body-parser');
 const session = require('express-session');
+const { Router } = require('express');
 //const session = require('session');
 // var app = express();
 // view engine setup
