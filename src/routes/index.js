@@ -3,13 +3,11 @@ var router = express.Router();
 const mongoose = require('mongoose');
 const session = require('express-session');
 ///change url 
-mongoose.connect('mongodb://127.0.0.1:27017/library', {
-    useUnifiedTopology: true,
-    useNewUrlParser: true,
-})
-.then(() => console.log('DB Connected!'))
-.catch(err => {
-     console.log('DB Connection Error: ' + err);
+mongoose.connect('mongodb+srv://devn:devn@cluster0.ueo55.mongodb.net/<dbname>?retryWrites=true&w=majority', { useNewUrlParser: true,
+useCreateIndex: true,
+useUnifiedTopology: true,
+useFindAndModify: false
+
 });
 const Schema = mongoose.Schema;
 var teacherModel = require('../models/teacher');
