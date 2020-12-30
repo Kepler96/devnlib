@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js"
   },
   "author": "Devika Nair",
   "license": "ISC",
@@ -28,9 +28,7 @@
   "bugs": {
     "url": "https://github.com/Kepler96/devnlib/issues"
   },
-  "scripts": {
-    "start": "node app.js"
-}
+  
   "homepage": "https://github.com/Kepler96/devnlib#readme",
   "description": ""
 }
