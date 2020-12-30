@@ -1,5 +1,8 @@
 const mongoose = require('mongoose');
-mongoose.connect('mongodb+srv://user1:user1@cluster.g58hq.mongodb.net/LIBRARYAPP?retryWrites=true&w=majority');
+mongoose.connect('mongodb+srv://devn:devn@cluster0.ueo55.mongodb.net/<dbname>?retryWrites=true&w=majority', { useNewUrlParser: true,
+useCreateIndex: true,
+useUnifiedTopology: true,
+useFindAndModify: false});
 const Schema = mongoose.Schema;
 
 const AuthorSchema = new Schema({
@@ -13,3 +16,4 @@ var Authordata = mongoose.model('authordata',AuthorSchema);
 
 
 module.exports = Authordata;
+

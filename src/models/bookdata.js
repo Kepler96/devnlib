@@ -1,6 +1,9 @@
 const mongoose = require('mongoose');
-mongoose.connect('mongodb+srv://devn:devn@cluster0.ueo55.mongodb.net/test');
-
+mongoose.connect('mongodb+srv://devn:devn@cluster0.ueo55.mongodb.net/<dbname>?retryWrites=true&w=majority', { useNewUrlParser: true,
+useCreateIndex: true,
+useUnifiedTopology: true,
+useFindAndModify: false});
+mongoose.set('useFindAndModify', false);
 const Schema = mongoose.Schema;
 
 const BookSchema = new Schema({
